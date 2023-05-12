@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 #corrigir var_time
 
-def c_e(C1_0,C2_0,k1,k2,n_analyzes,var_time): 
+def c_e(C1_0,C2_0,k1,k2): 
     """
 
     Definitions:
@@ -28,10 +28,12 @@ def c_e(C1_0,C2_0,k1,k2,n_analyzes,var_time):
     #
     #-----------------------------------------
 
+    
 
     ## Time setting
 
-    delta_t = var_time
+    n_analyzes=1
+    delta_t= 0.1
     t = np.arange(0, n_analyzes, delta_t) # Time Array
 
 
@@ -83,6 +85,9 @@ def plot_concentrations(C1,C2,name1,name2):
     
 
     """
+    n_analyzes=1
+    delta_t= 0.1
+    t = np.arange(0, n_analyzes, delta_t)
  
     plt.plot(t, C1, label=name1)
     plt.plot(t, C2, label=name2)
